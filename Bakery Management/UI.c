@@ -1,24 +1,33 @@
 #include "UI.h"
 #include <stdio.h>
+#include <stdlib.h>
 
-UI createUI(Controller* c) {
-	UI ui;
-	ui.ctrl = c;
+UI* createUI(Controller* c) {
+	UI* ui = (UI*)malloc(sizeof(UI));
+	ui->ctrl = c;
 
 	return ui;
 }
 
+void destroyUI(UI* ui) {
+	destroyController(ui->ctrl);
+	free(ui);
+}
+
 void printMenu() {
+	printf("\n");
 	printf("1- Add a material\n");
 	printf("2- List all materials\n");
 	printf("3- Delete a material\n");
 	printf("4- Update a material\n");
 	printf("5- List expired items containing a string\n");
+	printf("6- List items in short supply from a supplier\n");
+	printf("7- Undo\n");
 	printf("0- Exit\n");
 }
 
 int validCommand(int command) {
-	if(command >= 0 && command <= 6)
+	if(command >= 0 && command <= 9)
 		return 1;
 	return 0;
 }
@@ -81,8 +90,9 @@ int deleteMaterialUI(UI* ui) {
 	scanf("%49s", supplier);
 	printf("Input the date: ");
 	scanf("%49s", date);
+	int quantity = getQuantity(find(ui->ctrl->repo, name, supplier, date));
 
-	return deleteMaterial(ui->ctrl, name, supplier, date);
+	return deleteMaterial(ui->ctrl, name, supplier, quantity, date);
 }
 
 int updateMaterialUI(UI* ui) {
@@ -124,12 +134,52 @@ void listExpiredUI(UI *ui) {
 		toString(getMaterialOnPos(repo, i), str);
 		printf("%s\n", str);
 	}
-	for (int i = 0; i < length; ++i)
-		deleteMaterial(ui->ctrl, getMaterialOnPos(repo, i).name, getMaterialOnPos(repo, i).supplier, getMaterialOnPos(repo, i).date);
+	//for (int i = 0; i < length; ++i)
+		//deleteMaterial(ui->ctrl, getMaterialOnPos(repo, i)->name, getMaterialOnPos(repo, i)->supplier, getMaterialOnPos(repo, i)->date);
 	
 }
 
-void listDescendingUI(UI *ui) {
+void listShortSupply(UI* ui) {
+	char supplier[20];
+	int quantity = 0;
+	printf("Input supplier: ");
+	scanf("%49s", supplier);
+	printf("Input quantity: ");
+	scanf("%d", &quantity);
+
+	MaterialRepo* res = sortShortSupply(ui->ctrl, supplier, quantity);
+	int length = getLength(res);
+	if (length == 0)
+		printf("There are no items in short supply from this supplier");
+	else {
+		for(int i = 0; i < length; i++) {
+			char str[200];
+			toString(getMaterialOnPos(res, i), str);
+			printf("%s\n", str);
+		}
+	}
+	destroyRepo(res);
+}
+
+void listFromSupplierUI(UI* ui) {
+	char supplier[20];
+	printf("Input supplier: ");
+	scanf("%49s", supplier);
+	MaterialRepo* res = listFromSupplier(ui->ctrl,supplier);
+	int length = getLength(res);
+	if (length == 0)
+		printf("There are no items to show");
+	else {
+		for(int i = 0; i < length; i++) {
+			char str[200];
+			toString(getMaterialOnPos(res,i), str);
+			printf("%s\n",str);
+		}
+	}
+	destroyRepo(res);
+}
+
+/*void listDescendingUI(UI *ui) {
 	char tofind[50];
 	printf("Input string to find: ");
 	scanf("%49s", tofind);
@@ -148,6 +198,7 @@ void listDescendingUI(UI *ui) {
 		printf("%s\n", str);
 	}
 }
+*/
 
 void startUI(UI* ui) {
 	while (1) {
@@ -185,7 +236,29 @@ void startUI(UI* ui) {
 		if (command == 5)
 			listExpiredUI(ui);
 
+		//if (command == 6)
+			//listDescendingUI(ui);
+
 		if (command == 6)
-			listDescendingUI(ui);
+			listShortSupply(ui);
+
+		if (command == 7) {
+			int res = undo(ui->ctrl);
+			if (res == 1)
+				printf("Undo was successful.\n");
+			else
+				printf("No more undos to be made\n");
+		}
+
+		if(command == 8) {
+			int res = redo(ui->ctrl);
+			if (res == 1)
+				printf("Redo was successful.\n");
+			else
+				printf("No more redos to be made\n");
+		}
+
+		if(command == 9)
+			listFromSupplierUI(ui);
 	}
 }

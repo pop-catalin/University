@@ -2,16 +2,19 @@
 
 typedef struct
 {
-	char name[50];
-	char supplier[50];
+	char* name;
+	char* supplier;
 	int quantity;
-	char date[10];
+	char* date;
 } Material;
 
-Material createMaterial(char name[], char supplier[], int quantity, char date[]);
+Material* createMaterial(char* name, char* supplier, int quantity, char* date);
+void destroyMaterial(Material* m);
+Material* copyMaterial(Material* m);
 char* getName(Material* m);
 char* getSupplier(Material* m);
 int getQuantity(Material* m);
 void changeQuantity(Material *m, int q);
+char* getDate(Material* m);
 
-void toString(Material m, char str[]);
+void toString(Material* m, char str[]);
