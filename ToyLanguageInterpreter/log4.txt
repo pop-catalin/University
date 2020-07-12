@@ -1,0 +1,358 @@
+
+Thread number: 1
+STACK: 
+v = 10
+NewHeap(v,20); NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+v = 10
+NewHeap(v,20); NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+
+Thread number: 1
+STACK: 
+NewHeap(v,20); NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->10
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewHeap(v,20); NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->10
+
+Thread number: 1
+STACK: 
+NewHeap(v,20)
+NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->10
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewHeap(v,20)
+NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->10
+
+Thread number: 1
+STACK: 
+NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+1->20
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+NewHeap(a,22)
+print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+1->20
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewHeap(a,22)
+print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+1->20
+2->22
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+Thread number: 1
+STACK: 
+print(100+readHeap(v))
+print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+1->20
+2->22
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(100+readHeap(v))
+print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+Thread number: 1
+STACK: 
+print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+
+OUTPUT: 
+120
+HEAP: 
+1->20
+2->22
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+a->2
+v->1
+
+
+OUTPUT: 
+120
+122
+HEAP: 
+1->20
+2->22
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+a->2
+v->1
+
+Thread number: 1
+STACK: 
+v = 10
+NewHeap(v,20); NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+v = 10
+NewHeap(v,20); NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+
+Thread number: 1
+STACK: 
+NewHeap(v,20); NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->10
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewHeap(v,20); NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->10
+
+Thread number: 1
+STACK: 
+NewHeap(v,20)
+NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->10
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewHeap(v,20)
+NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->10
+
+Thread number: 1
+STACK: 
+NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+1->20
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewHeap(a,22); print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+NewHeap(a,22)
+print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+1->20
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewHeap(a,22)
+print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+1->20
+2->22
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(100+readHeap(v)); print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+Thread number: 1
+STACK: 
+print(100+readHeap(v))
+print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+1->20
+2->22
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(100+readHeap(v))
+print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+Thread number: 1
+STACK: 
+print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+
+OUTPUT: 
+120
+HEAP: 
+1->20
+2->22
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(100+readHeap(a))
+SYMBOL TABLE:
+a->2
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+a->2
+v->1
+
+
+OUTPUT: 
+120
+122
+HEAP: 
+1->20
+2->22
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+a->2
+v->1

@@ -1,0 +1,271 @@
+
+Thread number: 1
+STACK: 
+v = 6
+while(v-4)print(v); v = v-1; print(v)
+SYMBOL TABLE:
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+v = 6
+while(v-4)print(v); v = v-1; print(v)
+SYMBOL TABLE:
+
+Thread number: 1
+STACK: 
+while(v-4)print(v); v = v-1; print(v)
+SYMBOL TABLE:
+v->6
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+while(v-4)print(v); v = v-1; print(v)
+SYMBOL TABLE:
+v->6
+
+Thread number: 1
+STACK: 
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->6
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->6
+
+Thread number: 1
+STACK: 
+print(v); v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->6
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(v); v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->6
+
+Thread number: 1
+STACK: 
+print(v)
+v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->6
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(v)
+v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->6
+
+Thread number: 1
+STACK: 
+v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->6
+
+
+OUTPUT: 
+6
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->6
+
+Thread number: 1
+STACK: 
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->5
+
+
+OUTPUT: 
+6
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->5
+
+Thread number: 1
+STACK: 
+print(v); v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->5
+
+
+OUTPUT: 
+6
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(v); v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->5
+
+Thread number: 1
+STACK: 
+print(v)
+v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->5
+
+
+OUTPUT: 
+6
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(v)
+v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->5
+
+Thread number: 1
+STACK: 
+v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->5
+
+
+OUTPUT: 
+6
+5
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+v = v-1
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->5
+
+Thread number: 1
+STACK: 
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->4
+
+
+OUTPUT: 
+6
+5
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+while(v-4)print(v); v = v-1
+print(v)
+SYMBOL TABLE:
+v->4
+
+Thread number: 1
+STACK: 
+print(v)
+SYMBOL TABLE:
+v->4
+
+
+OUTPUT: 
+6
+5
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+print(v)
+SYMBOL TABLE:
+v->4
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->4
+
+
+OUTPUT: 
+6
+5
+4
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->4

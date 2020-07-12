@@ -1,0 +1,1643 @@
+
+Thread number: 1
+STACK: 
+NewSemaphore(v, 2)
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewSemaphore(v, 2)
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v))
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v))
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v); print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v); print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v))
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v)
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v))
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v)
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v); print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v); print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v)
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v); print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v)
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v); print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v)
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v)
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3)
+release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+2
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+2
+3
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+2
+3
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+NewSemaphore(v, 2)
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewSemaphore(v, 2)
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v))
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v))
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v); print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v); print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v))
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v)
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v))
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v)
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v); print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v); print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v)
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v); print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v)
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v); print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v)
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v)
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3)
+release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+2
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+2
+3
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+2
+3
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+NewSemaphore(v, 2)
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewSemaphore(v, 2)
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v))
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v))
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v); print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v); print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v))
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v)
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v))
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v)
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v); print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v); print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v)
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v); print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v)
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v); print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+NewSemaphore(v, 2)
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+NewSemaphore(v, 2)
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v)); fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v))
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(1); release(v))
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v); print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v)); fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v); print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v))
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v)
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(2); release(v))
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+acquire(v)
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v); print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+fork(acquire(v); print(3); release(v))
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v); print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v)
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v); print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+print(1)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+acquire(v)
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v); print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v)
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+acquire(v)
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+print(2)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3); release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3)
+release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+2
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+print(3)
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+2
+3
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+release(v)
+SYMBOL TABLE:
+v->1
+
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+SYMBOL TABLE:
+v->1
+
+
+OUTPUT: 
+1
+2
+3
+HEAP: 
+
+-----------------------------------------------------
+Thread number: 1
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 2
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 3
+STACK: 
+SYMBOL TABLE:
+v->1
+
+Thread number: 4
+STACK: 
+SYMBOL TABLE:
+v->1
